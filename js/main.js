@@ -131,10 +131,6 @@ function createCardGood(){
   cardsMenu.insertAdjacentElement('beforeend', card)
 }
 
-function showAlert(){
-  alert('Авторизируйтесь');
-}
-
 //открытие (генерация) карт с товарами выбранного ресторана
 function openGoods(e){
   const target = e.target;
@@ -150,7 +146,7 @@ function openGoods(e){
     createCardGood();
     createCardGood();
   } else if (restaurant && !login){
-    showAlert();
+    toogleModalAuth();
   }
 }
 
